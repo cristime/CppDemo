@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Programs/Addressbook/src/win/addressbook.cpp
+addressbook.h
+D:/Programs/Addressbook/src/win/addressbook.h
+fstream
+-
+iostream
+-
+
+D:/Programs/Addressbook/src/win/addressbook.h
+string
+-
+
+D:/Programs/Addressbook/src/win/main.cpp
+addressbook.h
+D:/Programs/Addressbook/src/win/addressbook.h
+iostream
+-
+ctype.h
+-
+

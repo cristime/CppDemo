@@ -1,0 +1,3 @@
+D:/Programs/Addressbook/cmake-build-debug/CMakeFiles/Addressbook.dir
+D:/Programs/Addressbook/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Programs/Addressbook/cmake-build-debug/CMakeFiles/rebuild_cache.dir

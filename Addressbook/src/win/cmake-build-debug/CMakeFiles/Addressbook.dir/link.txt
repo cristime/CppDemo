@@ -1,0 +1,3 @@
+"D:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Addressbook.dir/objects.a
+D:\mingw64\bin\ar.exe cr CMakeFiles\Addressbook.dir/objects.a @CMakeFiles\Addressbook.dir\objects1.rsp
+D:\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Addressbook.dir/objects.a -Wl,--no-whole-archive  -o Addressbook.exe -Wl,--out-implib,libAddressbook.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Addressbook.dir\linklibs.rsp
