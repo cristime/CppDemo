@@ -6,21 +6,28 @@
 
 using std::vector;
 
+#define FAIL 0
+#define FINISH 1
+
 class Game {
 	private:
 		vector < vector < char > > gameMap;
 		vector < vector < char > > answerMap;
-		int mineNum;
-		char cur_x, cur_y, oper;	// 当前坐标和操作
+		int mineNum, mapSize, openNum;
+		char cur_x, cur_y, oper;	// Current position and operation.
+		void bfs(int, int);
 
 	public:
-		Game();
-		~Game();
+		Game(int, char * []);		// Constructor
+		void GenMap();
+		inline void ShowMap();
 		void Input();
 		bool GameLoop();
-		bool Judge();
+		int Judge();
 		void Open();
 		void Mark();
 };
+
+inline void ClearWindow();
 
 #endif
