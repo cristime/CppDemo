@@ -1,7 +1,16 @@
-#include "parse.h"
+#include "../headers/parse.h"
 #include <cstdio>
 #include <cstring>
 #include <cstdlib>
+
+const char * Info[] = {
+	"Mine_console: A console minesweeper.\n",
+	"Usage: Mine_console [OPTION]\n",
+	"Options: E/N/H: easy/normal/hard\n",
+	"EASY: 10*10 gameboard, mine_num: 20\n",
+	"NORMAL: 20*20 gameboard, mine_num: 80\n",
+	"HARD: 30*30 gameboard, mine_num: 160\n"
+};
 
 const int ParseArg(int argc, char * argv[]) {
 	const char * MODE[] = { "E", "N", "H" };

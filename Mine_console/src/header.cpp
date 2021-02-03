@@ -1,4 +1,4 @@
-#include "header.h"
+#include "../headers/header.h"
 #include <cstdio>
 #include <cstdlib>
 #include <ctime>
@@ -17,7 +17,7 @@ inline void ClearWindow() {
     #endif
 }
 
-Game::Game(int argc, char *argv[])
+Game::Game(int & argc, char *argv[])
 {
     // Parse console arguments and select difficulty.
     const int result = ParseArg(argc, argv);
@@ -106,6 +106,7 @@ inline void Game::ShowMap()
             printf("%c ", j);
         putchar('\n');
     }
+    printf("Mine num: %d\n", mineNum);
 }
 
 
@@ -140,7 +141,25 @@ bool Game::GameLoop() {
 
 int Game::Judge() {
     if (openNum == mapSize * mapSize) return FINISH;
-    if (oper == 'O' && answerMap[cur_x][cur_y] == '*') return FAIL;
+    if (oper == 'O' && answerMap[cur_x][cur_y] == '*' || mineNum < 0) return FAIL;
+    return CONTINUE;
 }
 
-// TODO: Game::Open(); Game::mark();
+void Game::Open() {
+    int x = cur_x - '0', y = cur_y - '0';
+    gameMap[x][y] = answerMap[x][y];
+}
+
+void Game::Mark() {
+    int x = cur_x - '0', y = cur_y - '0';
+    gameMap[x][y] = 'M';
+    mineNum--;
+}
+
+void Game::PrintAnswer() {
+    for (auto i : answerMap) {
+        for (auto j : i)
+            printf("%c ", j);
+        putchar('\n');
+    }
+}

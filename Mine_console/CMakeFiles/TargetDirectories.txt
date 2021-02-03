@@ -1,0 +1,3 @@
+/home/cristime/Source/CppDemo/Mine_console/CMakeFiles/rebuild_cache.dir
+/home/cristime/Source/CppDemo/Mine_console/CMakeFiles/edit_cache.dir
+/home/cristime/Source/CppDemo/Mine_console/CMakeFiles/Mine_console.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/Mine_console.dir/src/header.cpp.o CMakeFiles/Mine_console.dir/src/main.cpp.o CMakeFiles/Mine_console.dir/src/parse.cpp.o  -o Mine_console 

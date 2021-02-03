@@ -8,6 +8,7 @@ using std::vector;
 
 #define FAIL 0
 #define FINISH 1
+#define CONTINUE 2
 
 class Game {
 	private:
@@ -18,7 +19,7 @@ class Game {
 		void bfs(int, int);
 
 	public:
-		Game(int, char * []);		// Constructor
+		Game(int &, char * []);		// Constructor
 		void GenMap();
 		inline void ShowMap();
 		void Input();
@@ -26,6 +27,7 @@ class Game {
 		int Judge();
 		void Open();
 		void Mark();
+		void PrintAnswer();
 };
 
 inline void ClearWindow();
